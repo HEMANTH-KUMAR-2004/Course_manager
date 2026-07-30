@@ -1,6 +1,78 @@
 import streamlit as st
 import requests
 BASE_URL="https://course-manager-kif6.onrender.com"
+st.markdown(
+    """
+    <style>
+    /* Main background */
+    .stApp {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    /* Title styling */
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    /* Subheader styling */
+    h2, h3 {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    /* Sidebar styling */
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #141E30, #243B55);
+    }
+
+    section[data-testid="stSidebar"] * {
+        color: white;
+    }
+
+    /* Text styling */
+    p {
+        color: white;
+        font-size: 18px;
+    }
+
+    /* Input boxes */
+    input {
+        background-color: white !important;
+        color: black !important;
+        border-radius: 10px;
+    }
+
+    /* Buttons */
+    div.stButton > button {
+        background: linear-gradient(90deg, #ff9966, #ff5e62);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 12px;
+        padding: 10px 25px;
+        border: none;
+    }
+
+    div.stButton > button:hover {
+        background: linear-gradient(90deg, #00c6ff, #0072ff);
+        color: white;
+    }
+
+    /* JSON box */
+    div[data-testid="stJson"] {
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("Course management system")
 menu=st.sidebar.selectbox(
     "choose an operation",
